@@ -1,0 +1,37 @@
+# Entorno virtual de Python
+.venv/
+venv/
+env/
+
+# Archivos de caché y compilados de Python
+__pycache__/
+*.pyc
+
+# Archivos de base de datos de desarrollo
+*.sqlite3
+
+# Archivos de entorno (Contienen secretos)
+.env
+.env.*
+!.env.example
+
+# Archivos de media y estáticos generados por Django
+/backend/mediafiles/
+/backend/staticfiles/
+
+# Dependencias de Node.js
+/frontend/node_modules/
+/frontend/build/
+
+# Logs y archivos de debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
