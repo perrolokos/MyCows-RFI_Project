@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Ejemplar</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        .header { text-align: center; margin-bottom: 2em; }
+        .header h1 { margin: 0; }
+        .header p { margin: 0; color: #555; }
+        .card { border: 1px solid #ddd; border-radius: 5px; padding: 1em; margin-bottom: 1em; }
+        .card h2 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 0.5em; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; }
+        .kpi { text-align: center; }
+        .kpi-value { font-size: 2em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Reporte de Ejemplar - MyCows RFI</h1>
+        <p>ID: {{ ejemplar.identificador }}</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ ejemplar.nombre|default:"Ejemplar sin nombre" }}</h2>
+        <div class="grid">
+            <div><strong>Raza:</strong> {{ ejemplar.raza.nombre }}</div>
+            <div><strong>Nacimiento:</strong> {{ ejemplar.fecha_nacimiento }}</div>
+            <div><strong>Peso Actual:</strong> {{ ejemplar.peso_actual|default:"N/A" }} kg</div>
+            <div><strong>Talla Actual:</strong> {{ ejemplar.talla_actual|default:"N/A" }} m</div>
+        </div>
+    </div>
+
+    <div class="card kpi">
+        <h2>Score Final</h2>
+        <div class="kpi-value">{{ score_final }}</div>
+    </div>
+</body>
+</html>
